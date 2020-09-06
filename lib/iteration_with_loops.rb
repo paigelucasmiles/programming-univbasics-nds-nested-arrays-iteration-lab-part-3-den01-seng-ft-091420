@@ -8,7 +8,8 @@ def join_nested_strings(array_of_arrays)
   while row_index < array_of_arrays.count do
     element_index = 0
     while element_index < array_of_arrays[row_index].count do
-      if Integer(array_of_arrays[row_index][element_index], exception: false) == nil
+      if array_of_arrays[row_index][element_index].is_a? String
+        #Integer(array_of_arrays[row_index][element_index], exception: false) == nil
         collected_strings.push(array_of_arrays[row_index][element_index])
       end 
     element_index += 1
